@@ -1,33 +1,16 @@
 .flex-container {
-    width: min(100%, 500px);
-    font-family: 'Trebuchet MS', sans-serif;
-    display: flex;
-    justify-content: center; 
-    align-items: center;  
-    font-size: clamp(12px, 5vw, 20px);
-    height: 150x;
-    } 
+  display: flex;
+}
 
-.link-container{ display: flex;
-    justify-content: center;
-    align-items: center;  
-    height: 150x;
-/* Create three equal columns that float next to each other */
-.column {
-    float: left;
-    width: 33.33%;
-  }
-  
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other on smaller screens (600px wide or less) */
-  @media screen and (max-width: 600px) {
-    .column {
-      width: 100%;
-    }
-  }
+/* this selector selects all divs inside of .flex-container */
+.flex-container div {
+  background: peachpuff;
+  border: 4px solid rgb(0, 0, 0);
+  height: 100px;
+  flex: 1 1 0%;
+}
+
+/* only div.two is selected here */
+.flex-container .two {
+  flex: 2 1 0%;
+}
